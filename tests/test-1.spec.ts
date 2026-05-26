@@ -8,4 +8,5 @@ test('has title', async ({page}) => {
   await page.getByRole('textbox', {name: 'Password'}).fill('crmsfa');
   await page.getByRole('button', {name: 'Login'}).click();
   await expect(page.locator('#errorDiv')).toContainText('following error occurred during login:user not found.');
+  console.log(commit in pipeline);
 });
